@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twilio video app demo</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://sdk.twilio.com/js/video/releases/2.15.2/twilio-video.min.js"></script>
+    <script src="https://media.twiliocdn.com/sdk/js/conversations/v2.2/twilio-conversations.min.js"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <h1>Twilio Video demo app</h1>
+    <form id="join-room-form">
+        Username : <input type="text" name="username" id="username"> <br>
+        Roomname : <input type="text" name="roomname" id="roomname"> <br>
+        <button id="join_leave" type="submit">Join room</button>
+        <button id="toggle_chat" disabled>Toggle chat</button>
+        <button id="recording_btn" value="start" disabled>Start recording</button>
+        <button id="compositions">Check for compositions</button>
+    </form>
+    <p id="count">Disconnected</p>
+    <div id="root">
+        <div id="container" class="container">
+            <div id="local" class="participant"><div></div><div class="label">me</div></div>
+        </div>
+        <div id="chat">
+            <div id="chat-scroll">
+                <div id="chat-content"></div>
+            </div>
+            <input type="text" id="chat-input">
+        </div>
+    </div>
+</body>
+</html>
